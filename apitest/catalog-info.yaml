@@ -2,12 +2,14 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: apitest
-  description: An example of a Backstage application.
+  description: An example of a Backstage Graphql application.
   # Example for optional annotations
   # annotations:
   #   github.com/project-slug: backstage/backstage
   #   backstage.io/techdocs-ref: dir:.
 spec:
-  type: website
-  owner: john@example.com
+  type: service
+  owner: Krish
+  providesApis:
+    - user-graphql-api
   lifecycle: experimental
