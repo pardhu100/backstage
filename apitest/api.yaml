@@ -1,0 +1,25 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: user-graphql-api
+  description: A GraphQL API for user management
+  tags:
+    - graphql
+    - api
+spec:
+  type: graphql
+  lifecycle: production
+  owner: user-team
+  definition:
+    $url: 'https://my-api.com/graphql-schema.graphql'
+    $text: |
+      type Query {
+        user(id: ID!): User
+        allUsers: [User!]!
+      }
+
+      type User {
+        id: ID!
+        name: String!
+        email: String!
+      }
