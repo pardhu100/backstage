@@ -11,7 +11,6 @@ spec:
   lifecycle: production
   owner: user-team
   definition:
-    $url: 'https://my-api.com/graphql-schema.graphql'
     $text: |
       type Query {
         user(id: ID!): User
